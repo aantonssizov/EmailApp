@@ -9,4 +9,5 @@
     <dimen name="email_text_ts">16sp</dimen>
     <dimen name="email_time_passed_ts">16sp</dimen>
     <dimen name="line_height">1dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
