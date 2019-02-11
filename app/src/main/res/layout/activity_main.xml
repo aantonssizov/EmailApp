@@ -12,6 +12,6 @@
         android:id="@+id/ribbon_of_emails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical" />
+        tools:listitem="@layout/ribbon_of_emails_item" />
 
 </LinearLayout>
