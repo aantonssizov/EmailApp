@@ -10,4 +10,5 @@
     <dimen name="email_time_passed_ts">16sp</dimen>
     <dimen name="line_height">1dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="edit_text_padding">16dp</dimen>
 </resources>

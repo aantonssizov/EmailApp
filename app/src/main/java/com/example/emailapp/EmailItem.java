@@ -1,14 +1,18 @@
 package com.example.emailapp;
 
 public class EmailItem {
-    private String userImg, userName, emailHeader, emailText, emailTimePassed;
+    private String userImg; // User avatar
+    private String userName; // User name
+    private String emailSubject; // Email subject
+    private String emailCompose; // Compose email
+    private String emailDate; // Email date
 
-    public EmailItem(String userImg, String userName, String emailHeader, String emailText, String emailTimePassed) {
+    public EmailItem(String userImg, String userName, String emailSubject, String emailCompose, String emailDate) {
         this.userImg = userImg;
         this.userName = userName;
-        this.emailHeader = emailHeader;
-        this.emailText = emailText;
-        this.emailTimePassed = emailTimePassed;
+        this.emailSubject = emailSubject;
+        this.emailCompose = emailCompose;
+        this.emailDate = emailDate;
     }
 
     public String getUserImg() {
@@ -27,27 +31,27 @@ public class EmailItem {
         this.userName = userName;
     }
 
-    public String getEmailHeader() {
-        return emailHeader;
+    public String getEmailSubject() {
+        return emailSubject;
     }
 
-    public void setEmailHeader(String emailHeader) {
-        this.emailHeader = emailHeader;
+    public void setEmailSubject(String emailSubject) {
+        this.emailSubject = emailSubject;
     }
 
-    public String getEmailText() {
-        return emailText;
+    public String getEmailCompose() {
+        return emailCompose;
     }
 
-    public void setEmailText(String emailText) {
-        this.emailText = emailText;
+    public void setEmailCompose(String emailCompose) {
+        this.emailCompose = emailCompose;
     }
 
-    public String getEmailTimePassed() {
-        return emailTimePassed;
+    public String getEmailDate() {
+        return emailDate;
     }
 
-    public void setEmailTimePassed(String emailTimePassed) {
-        this.emailTimePassed = emailTimePassed;
+    public void setEmailDate(String emailDate) {
+        this.emailDate = emailDate;
     }
 }

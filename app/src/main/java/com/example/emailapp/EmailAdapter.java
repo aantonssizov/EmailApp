@@ -17,7 +17,7 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
     private Context context; // our Activity
     private List<EmailItem> emailItems; // Data for list items
 
-    public EmailAdapter(Context context, List<EmailItem> emailItems) {
+    EmailAdapter(Context context, List<EmailItem> emailItems) {
         this.context = context;
         this.emailItems = emailItems;
     }
@@ -55,22 +55,22 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
             holder.userNameTv.setText(R.string.user_name);
         }
 
-        if (item.getEmailHeader() != null && !item.getEmailHeader().isEmpty()) {
-            holder.emailHeaderTv.setText(item.getEmailHeader());
+        if (item.getEmailSubject() != null && !item.getEmailSubject().isEmpty()) {
+            holder.emailSubjectTv.setText(item.getEmailSubject());
         } else {
-            holder.emailHeaderTv.setText(R.string.email_header);
+            holder.emailSubjectTv.setText(R.string.email_subject);
         }
 
-        if (item.getEmailText() != null && !item.getEmailText().isEmpty()) {
-            holder.emailTextTv.setText(item.getEmailText());
+        if (item.getEmailCompose() != null && !item.getEmailCompose().isEmpty()) {
+            holder.emailComposeTv.setText(item.getEmailCompose());
         } else {
-            holder.emailTextTv.setText(R.string.email_text);
+            holder.emailComposeTv.setText(R.string.email_text);
         }
 
-        if (item.getEmailTimePassed() != null && !item.getEmailTimePassed().isEmpty()) {
-            holder.emailTimePassedTv.setText(item.getEmailTimePassed());
+        if (item.getEmailDate() != null && !item.getEmailDate().isEmpty()) {
+            holder.emailDateTv.setText(item.getEmailDate());
         } else {
-            holder.emailTimePassedTv.setText(R.string.time_passed);
+            holder.emailDateTv.setText(R.string.email_date);
         }
     }
 
@@ -81,15 +81,15 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
 
     class ViewHolder extends RecyclerView.ViewHolder {
         ImageView userImg;
-        TextView userNameTv, emailHeaderTv, emailTextTv, emailTimePassedTv;
+        TextView userNameTv, emailSubjectTv, emailComposeTv, emailDateTv;
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
             userImg = itemView.findViewById(R.id.user_image_view);
             userNameTv = itemView.findViewById(R.id.user_text_view);
-            emailHeaderTv = itemView.findViewById(R.id.email_header_text_view);
-            emailTextTv = itemView.findViewById(R.id.email_text_text_view);
-            emailTimePassedTv = itemView.findViewById(R.id.email_time_passed_text_view);
+            emailSubjectTv = itemView.findViewById(R.id.email_subject_text_view);
+            emailComposeTv = itemView.findViewById(R.id.email_compose_text_view);
+            emailDateTv = itemView.findViewById(R.id.email_date_text_view);
         }
     }
 }

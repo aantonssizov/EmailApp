@@ -1,7 +1,10 @@
 <resources>
-    <string name="app_name">Email App</string>
-    <string name="user_name">Saudi arabia</string>
-    <string name="email_header">Do you want to build for us a web site?</string>
-    <string name="email_text">Hey, we know that you can build web-sites. Okay. Can you build a web-site for us?</string>
-    <string name="time_passed">18m</string>
+    <string name="app_name" translatable="false">Email App</string>
+    <string name="user_name">User Name</string>
+    <string name="email_subject">Subject</string>
+    <string name="email_text">Compose email</string>
+    <string name="email_date">18m</string>
+    <string name="email_to">To</string>
+    <string name="add_business_signature">Add business signature</string>
+    <string name="create_message">Create message</string>
 </resources>
