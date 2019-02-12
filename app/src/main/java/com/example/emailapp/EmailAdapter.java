@@ -16,10 +16,12 @@ import java.util.List;
 public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> {
     private Context context; // our Activity
     private List<EmailItem> emailItems; // Data for list items
+    private EmailItemClicked callback;
 
-    EmailAdapter(Context context, List<EmailItem> emailItems) {
+    EmailAdapter(Context context, List<EmailItem> emailItems, EmailItemClicked callback) {
         this.context = context;
         this.emailItems = emailItems;
+        this.callback = callback;
     }
 
     // We use ribbon of emails layout for draw our items
@@ -28,7 +30,18 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.ribbon_of_emails_item, parent, false);
-        return new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int adapterPosition = holder.getAdapterPosition();
+
+                if (adapterPosition != RecyclerView.NO_POSITION && callback != null) {
+                    callback.ItemClickedCallback(adapterPosition);
+                }
+            }
+        });
+        return holder;
     }
 
     // give data for items
@@ -72,6 +85,10 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
         } else {
             holder.emailDateTv.setText(R.string.email_date);
         }
+    }
+
+    interface EmailItemClicked {
+        void ItemClickedCallback(int itemPosition);
     }
 
     @Override

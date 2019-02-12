@@ -14,7 +14,12 @@
         android:padding="@dimen/edit_text_padding"
         android:hint="@string/email_to"
         android:inputType="textEmailAddress"
-        android:background="@android:drawable/editbox_background_normal"  />
+        android:background="@null"  />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_bottom_height"
+        android:background="@android:color/darker_gray"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -23,7 +28,12 @@
         android:padding="@dimen/edit_text_padding"
         android:hint="@string/email_subject"
         android:inputType="textEmailSubject"
-        android:background="@android:drawable/editbox_background_normal"  />
+        android:background="@null"  />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_bottom_height"
+        android:background="@android:color/darker_gray"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -33,7 +43,12 @@
         android:hint="@string/email_to"
         android:inputType="text"
         android:gravity="top"
-        android:background="@android:drawable/editbox_background_normal"  />
+        android:background="@null"  />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_bottom_height"
+        android:background="@android:color/darker_gray"/>
 
     <CheckBox
         android:layout_width="match_parent"

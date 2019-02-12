@@ -11,4 +11,5 @@
     <dimen name="line_height">1dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="edit_text_padding">16dp</dimen>
+    <dimen name="border_bottom_height">1dp</dimen>
 </resources>
