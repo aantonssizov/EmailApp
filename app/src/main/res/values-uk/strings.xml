@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Программа електронної пошти</string>
+    <string name="user_name">Ім\'я користувача</string>
+    <string name="email_subject">Тема</string>
+    <string name="email_compose">Текст письма</string>
+    <string name="email_date">18хв</string>
+    <string name="email_to">До кого</string>
+    <string name="add_business_signature">Додати діловий підпис</string>
+    <string name="create_message">Створити письмо</string>
+    <string name="forward">Переслати</string>
+    <string name="reply">Відповісти</string>
+</resources>

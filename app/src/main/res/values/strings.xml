@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Email App</string>
+    <string name="app_name">Email App</string>
     <string name="user_name">User Name</string>
     <string name="email_subject">Subject</string>
     <string name="email_compose">Compose email</string>

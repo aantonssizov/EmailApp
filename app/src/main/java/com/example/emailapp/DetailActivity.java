@@ -34,7 +34,7 @@ public class DetailActivity extends AppCompatActivity {
         // Place data into views
         // Using Glide for load images
         if (userImg != null && !userImg.isEmpty()) {
-            Glide.with(this) // our context variable where we will draw our items
+            Glide.with(this)
                     .load(userImg)
                     .into(userImgIv);
         } else {
