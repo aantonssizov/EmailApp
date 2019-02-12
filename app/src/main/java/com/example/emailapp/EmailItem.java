@@ -1,6 +1,20 @@
 package com.example.emailapp;
 
-public class EmailItem {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class EmailItem implements Parcelable {
+    public static final Creator<EmailItem> CREATOR = new Creator<EmailItem>() {
+        @Override
+        public EmailItem createFromParcel(Parcel in) {
+            return new EmailItem(in);
+        }
+
+        @Override
+        public EmailItem[] newArray(int size) {
+            return new EmailItem[size];
+        }
+    };
     private String userImg; // User avatar
     private String userName; // User name
     private String emailSubject; // Email subject
@@ -13,6 +27,14 @@ public class EmailItem {
         this.emailSubject = emailSubject;
         this.emailCompose = emailCompose;
         this.emailDate = emailDate;
+    }
+
+    protected EmailItem(Parcel in) {
+        userImg = in.readString();
+        userName = in.readString();
+        emailSubject = in.readString();
+        emailCompose = in.readString();
+        emailDate = in.readString();
     }
 
     public String getUserImg() {
@@ -53,5 +75,19 @@ public class EmailItem {
 
     public void setEmailDate(String emailDate) {
         this.emailDate = emailDate;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(userImg);
+        dest.writeString(userName);
+        dest.writeString(emailSubject);
+        dest.writeString(emailCompose);
+        dest.writeString(emailDate);
     }
 }

@@ -49,7 +49,7 @@
             android:layout_marginStart="@dimen/text_margin_start"
             android:layout_toEndOf="@id/user_image_view"
             android:singleLine="true"
-            android:text="@string/email_text"
+            android:text="@string/email_compose"
             android:textSize="@dimen/email_text_ts" />
 
         <TextView

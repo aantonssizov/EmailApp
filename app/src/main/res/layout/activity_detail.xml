@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <ImageView
+        android:id="@+id/user_image_detail"
+        android:layout_width="@dimen/user_image_size"
+        android:layout_height="@dimen/user_image_size"
+        android:layout_marginStart="@dimen/user_image_margin"
+        android:layout_marginTop="@dimen/user_image_margin" />
+
+    <TextView
+        android:id="@+id/user_name_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/detail_default_margin_tv"
+        android:layout_marginTop="@dimen/detail_default_margin_tv"
+        android:layout_toEndOf="@id/user_image_detail"
+        android:text="@string/user_name"
+        android:textColor="@color/user_name_detail_text_color"
+        android:textSize="@dimen/user_name_detail_text_size" />
+
+    <TextView
+        android:id="@+id/email_subject_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name_detail"
+        android:layout_marginStart="@dimen/detail_default_margin_tv"
+        android:layout_toEndOf="@id/user_image_detail"
+        android:text="@string/email_subject"
+        android:textColor="@color/detail_default_text_color"
+        android:textSize="@dimen/detail_default_text_size" />
+
+    <TextView
+        android:id="@+id/email_date_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/detail_default_margin_tv"
+        android:text="@string/email_date"
+        android:textColor="@color/detail_default_text_color" />
+
+    <TextView
+        android:id="@+id/email_compose_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_image_detail"
+        android:layout_marginStart="@dimen/detail_default_margin_tv"
+        android:layout_marginEnd="@dimen/detail_default_margin_tv"
+        android:text="@string/email_compose"
+        android:textColor="@color/detail_default_text_color"
+        android:textSize="@dimen/detail_default_text_size" />
+
+
+    <Button
+        android:id="@+id/action1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:text="@string/forward"
+        android:textColor="@color/detail_button_default_color"
+        android:textSize="@dimen/detail_default_text_size" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@id/action1"
+        android:background="@android:color/transparent"
+        android:text="@string/reply"
+        android:textColor="@color/detail_button_default_color"
+        android:textSize="@dimen/detail_default_text_size" />
+
+</RelativeLayout>

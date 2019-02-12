@@ -77,7 +77,7 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
         if (item.getEmailCompose() != null && !item.getEmailCompose().isEmpty()) {
             holder.emailComposeTv.setText(item.getEmailCompose());
         } else {
-            holder.emailComposeTv.setText(R.string.email_text);
+            holder.emailComposeTv.setText(R.string.email_compose);
         }
 
         if (item.getEmailDate() != null && !item.getEmailDate().isEmpty()) {
@@ -87,13 +87,13 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
         }
     }
 
-    interface EmailItemClicked {
-        void ItemClickedCallback(int itemPosition);
-    }
-
     @Override
     public int getItemCount() {
         return (emailItems == null) ? 0 : emailItems.size();
+    }
+
+    interface EmailItemClicked {
+        void ItemClickedCallback(int itemPosition);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

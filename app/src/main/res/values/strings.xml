@@ -2,9 +2,11 @@
     <string name="app_name" translatable="false">Email App</string>
     <string name="user_name">User Name</string>
     <string name="email_subject">Subject</string>
-    <string name="email_text">Compose email</string>
+    <string name="email_compose">Compose email</string>
     <string name="email_date">18m</string>
     <string name="email_to">To</string>
     <string name="add_business_signature">Add business signature</string>
     <string name="create_message">Create message</string>
+    <string name="forward">Forward</string>
+    <string name="reply">Reply</string>
 </resources>

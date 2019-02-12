@@ -1,18 +1,18 @@
 package com.example.emailapp;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements EmailAdapter.EmailItemClicked {
+    private static final String EMAIL_ITEM = "email item";
     private List<EmailItem> data = generateData();
     private RecyclerView ribbonOfEmails;
     private RecyclerView.Adapter ribbonOfEmailsAdapter;
@@ -59,7 +59,8 @@ public class MainActivity extends AppCompatActivity implements EmailAdapter.Emai
 
     @Override
     public void ItemClickedCallback(int itemPosition) {
-        String toastMessage = "The message from " + data.get(itemPosition).getUserName() + " was clicked!";
-        Toast.makeText(this, toastMessage, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, DetailActivity.class);
+        intent.putExtra(EMAIL_ITEM, data.get(itemPosition));
+        startActivity(intent);
     }
 }
