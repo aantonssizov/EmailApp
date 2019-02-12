@@ -1,9 +1,12 @@
 package com.example.emailapp;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView ribbonOfEmails;
     private RecyclerView.Adapter ribbonOfEmailsAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private FloatingActionButton createMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
 
         ribbonOfEmailsAdapter = new EmailAdapter(this, data);
         ribbonOfEmails.setAdapter(ribbonOfEmailsAdapter);
+
+        createMessage = (FloatingActionButton) findViewById(R.id.create_message_fab);
+        createMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CreateMessageActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private List<EmailItem> generateData() {
