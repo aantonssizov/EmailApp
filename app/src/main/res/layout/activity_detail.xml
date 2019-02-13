@@ -51,6 +51,7 @@
         android:layout_below="@id/user_image_detail"
         android:layout_marginStart="@dimen/detail_default_margin_tv"
         android:layout_marginEnd="@dimen/detail_default_margin_tv"
+        android:layout_marginTop="@dimen/detail_default_margin_tv"
         android:text="@string/email_compose"
         android:textColor="@color/detail_default_text_color"
         android:textSize="@dimen/detail_default_text_size" />
