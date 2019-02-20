@@ -28,8 +28,7 @@ public class EmailAdapter extends RecyclerView.Adapter<EmailAdapter.ViewHolder> 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.ribbon_of_emails_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ribbon_of_emails_item, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         view.setOnClickListener(new View.OnClickListener() {
             @Override

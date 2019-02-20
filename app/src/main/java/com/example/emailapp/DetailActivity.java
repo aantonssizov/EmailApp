@@ -15,7 +15,7 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         // Restore email item
-        EmailItem emailItem = getIntent().getParcelableExtra("email item");
+        EmailItem emailItem = getIntent().getParcelableExtra("email_item");
 
         // Extract data
         String userImg = emailItem.getUserImg();

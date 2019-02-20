@@ -4,17 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class EmailItem implements Parcelable {
-    public static final Creator<EmailItem> CREATOR = new Creator<EmailItem>() {
-        @Override
-        public EmailItem createFromParcel(Parcel in) {
-            return new EmailItem(in);
-        }
 
-        @Override
-        public EmailItem[] newArray(int size) {
-            return new EmailItem[size];
-        }
-    };
     private String userImg; // User avatar
     private String userName; // User name
     private String emailSubject; // Email subject
@@ -90,4 +80,16 @@ public class EmailItem implements Parcelable {
         dest.writeString(emailCompose);
         dest.writeString(emailDate);
     }
+
+    public static final Creator<EmailItem> CREATOR = new Creator<EmailItem>() {
+        @Override
+        public EmailItem createFromParcel(Parcel in) {
+            return new EmailItem(in);
+        }
+
+        @Override
+        public EmailItem[] newArray(int size) {
+            return new EmailItem[size];
+        }
+    };
 }

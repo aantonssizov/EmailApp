@@ -20,7 +20,7 @@
 
         <!-- Our Ribbon of emails using RecyclerView -->
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/ribbon_of_emails"
+            android:id="@+id/ribbon_of_emails_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/ribbon_of_emails_item" />

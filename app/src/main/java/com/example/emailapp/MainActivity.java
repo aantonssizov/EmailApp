@@ -12,12 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements EmailAdapter.EmailItemClicked {
-    private static final String EMAIL_ITEM = "email item";
+    private static final String EMAIL_ITEM = "email_item";
     private List<EmailItem> data = generateData();
-    private RecyclerView ribbonOfEmails;
-    private RecyclerView.Adapter ribbonOfEmailsAdapter;
-    private RecyclerView.LayoutManager layoutManager;
-    private FloatingActionButton createMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,16 +21,16 @@ public class MainActivity extends AppCompatActivity implements EmailAdapter.Emai
         setContentView(R.layout.activity_main);
 
         // Load our Recycler View
-        ribbonOfEmails = findViewById(R.id.ribbon_of_emails);
+        RecyclerView ribbonOfEmailsRv = findViewById(R.id.ribbon_of_emails_rv);
 
-        layoutManager = new LinearLayoutManager(this);
-        ribbonOfEmails.setLayoutManager(layoutManager);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        ribbonOfEmailsRv.setLayoutManager(layoutManager);
 
-        ribbonOfEmailsAdapter = new EmailAdapter(this, data, this);
-        ribbonOfEmails.setAdapter(ribbonOfEmailsAdapter);
+        RecyclerView.Adapter ribbonOfEmailsAdapter = new EmailAdapter(this, data, this);
+        ribbonOfEmailsRv.setAdapter(ribbonOfEmailsAdapter);
 
-        createMessage = findViewById(R.id.create_message_fab);
-        createMessage.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton createMessageFab = findViewById(R.id.create_message_fab);
+        createMessageFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CreateMessageActivity.class);
